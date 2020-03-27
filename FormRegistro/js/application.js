@@ -32,6 +32,25 @@ function checkPronvincia() {
 	}
 
 }
+function checkTrabajoPronvincia() {
+	var object = event.target;
+
+	console.log(event.target.value);
+
+	$.get("json/buenos-aires.json", function (data) {
+		console.log("Martin");
+	});
+
+	//console.log($(event.target).children(":first").data('ort'));
+
+	if (event.target.value == "ciudad") {
+		$("#cmbTrabajoLocalidad").parent().show('slow');
+	} else {
+		$("#cmbTrabajoLocalidad").parent().hide('slow');
+		//document.getElementById('cmbLocalidad').parentNode.setAttribute('style', 'display:none');
+	}
+
+}
 
 function validarForm(e) {
 	var first = false;
